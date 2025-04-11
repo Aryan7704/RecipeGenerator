@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gemini Recipe Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Gemini Recipe Generator</h1>
+        <form method="POST">
+            <label>Ingredients (comma-separated):</label>
+            <input type="text" name="ingredients" required>
+
+            <label>Dietary Preferences (optional):</label>
+            <input type="text" name="preferences" placeholder="e.g. vegetarian, gluten-free">
+
+            <label>Preferred Cuisine (optional):</label>
+            <input type="text" name="cuisine" placeholder="e.g. Italian, Asian">
+
+            <label>Meal Type (optional):</label>
+            <input type="text" name="meal_type" placeholder="e.g. dinner, dessert">
+
+            <label>Difficulty (optional):</label>
+            <select name="difficulty">
+                <option value="">Any</option>
+                <option>easy</option>
+                <option>intermediate</option>
+                <option>advanced</option>
+            </select>
+
+            <button type="submit">Generate Recipe</button>
+        </form>
+
+        {% if recipe %}
+        <div class="recipe">
+            <h2>Your Custom Recipe</h2>
+            <pre>{{ recipe }}</pre>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

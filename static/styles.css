@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #444;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+input, select, button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.recipe pre {
+    background: #f4f4f4;
+    padding: 15px;
+    white-space: pre-wrap;
+    border-radius: 8px;
+}
