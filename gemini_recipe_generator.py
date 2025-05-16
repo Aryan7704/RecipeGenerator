@@ -6,11 +6,11 @@ from datetime import datetime
 
 class GeminiRecipeGenerator:
     def __init__(self, api_key=None):
-        self.api_key = api_key or 'AIzaSyAagh9NiZlZNEg-so--9ZbvYSe60TN63Og'
+        self.api_key = api_key or 'AIzaSyDRXZNjsDsRtY1TIwhqS7vg-58WE1w1kfs'
         if not self.api_key:
             print("Warning: No API key provided. ")
         
-        self.api_url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent"
+        self.api_url = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
         
         self.cuisine_styles = ["Italian", "Mexican", "Asian", "Mediterranean", "American", "Indian", "French", "Middle Eastern"]
         self.meal_types = ["breakfast", "lunch", "dinner", "appetizer", "dessert", "snack"]
@@ -256,7 +256,7 @@ def get_recipe_from_terminal():
     generator = GeminiRecipeGenerator()
 
     if not generator.api_key:
-        api_key = 'AIzaSyAagh9NiZlZNEg-so--9ZbvYSe60TN63Og'
+        api_key = 'AIzaSyDRXZNjsDsRtY1TIwhqS7vg-58WE1w1kfs'
         if api_key.strip():
             generator.api_key = api_key
         else:
